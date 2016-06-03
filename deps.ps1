@@ -1,5 +1,5 @@
 # Update Help for Modules
-Update-Help -Force
+UpdateHelp -Force
 
 ### Package Providers
 Get-PackageProvider NuGet -Force
@@ -11,8 +11,8 @@ Get-PackageProvider NuGet -Force
 if ((which cinst) -eq $null) {
     iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
     Refresh-Environment
-    choco feature enable -n=allowGlobalConfirmation
 }
+choco feature enable -n=allowGlobalConfirmation
 
 # system and cli
 #cinst curl #`curl` comes with GH4W
@@ -21,22 +21,49 @@ cinst webpi
 cinst wget
 cinst wput
 
+# utils
+cinst git
+cinst 7zip
+cinst 1password
+cinst synergy
+cinst dropbox
+cinst wunderlist
+cinst putty
+cinst mobaxterm
+cinst slack
+cinst sysinternals
+
 # browsers
 cinst GoogleChrome
-cinst GoogleChrome.Canary
 cinst Firefox
 cinst Opera
 
 # dev tools and frameworks
 cinst atom
 cinst GitHubForWindows
-cinst hg
 cinst Fiddler4
 cinst nodejs.install
 cinst ruby
+cinst railsinstaller
+cinst python
+cinst jdk8
 cinst vim
-cinst winmerge
+cinst conemu
+cinst visualstudiocode
+cinst datagrip
+cinst rust
 
+#Azure
+cinst azurepowershell
+cinst azcopy
+cinst azurestorageexplorer
+cinst terraform
+
+#AWS
+cinst awscli
+
+# install visual studio 
+cinst visualstudio2015professional
 # other
 #cinst wincommandpaste # Copy/Paste is supported natively in Win10
 
